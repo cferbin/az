@@ -1,0 +1,42 @@
+git init 产生的目录解释
+error: src refspec master does not match any.
+引起该错误的原因是，目录中没有文件，空目录是不能提交上去的
+error: insufficient permission for adding an object to repository database ./objects
+服务端没有可写目录的权限
+
+错误提示：fatal: remote origin already exists.
+解决办法：$ git remote rm origin
+错误提示：error: failed to push som refs to ........
+解决办法：$ git pull origin master //先pull 下来 再push 上去
+git init //在当前项目工程下履行这个号令相当于把当前项目git化，变身！
+
+git add .//把当前目次下代码参加git的跟踪中，意思就是交给git经管，提交到本地库
+
+git add <file> //把当前文件参加的git的跟踪中，交给git经管，提交到本地库
+
+git commit -m “…”//相当于写点提交信息
+
+git remote add origin git＠github.com:ellocc/gittest.git //这个相当于指定本地库与github上的哪个项目相连
+
+git push -u origin master //将本地库提交到github上。
+
+git clone git＠github.com:ellocc/gittest.git  //将github上的项目down下来。
+
+git fetch origin //取得长途更新，这里可以看做是筹办要取了
+
+git merge origin/master //把更新的内容归并到本地分支/master
+
+下面是删除文件后的提交
+
+git status //可以看到我们删除的哪些文件
+
+git add .   //删除之后的文件提交git经管。
+
+git rm a.c //删除文件
+
+git rm -r gittest //删除目次
+
+ 
+
+git reset --hard HEAD 回滚到add之前的状态
+git diff比较的是跟踪列表中的文件和文件系统中文件的差别
